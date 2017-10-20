@@ -1,0 +1,13 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"imgs/鬼步4.jpg",
+			"imgs/鬼步2.jpg",
+			"imgs/鬼步1.jpg",
+			"imgs/鬼步3.jpg"
+		]
+	}
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">列表</h1>
+		</header>
+		<br>	<br>
+		<!--右侧添加导航箭头
+若右侧需要增加导航箭头，变成导航链接，
+则只需在li节点下增加a子节点，
+并为该a节点增加.mui-navigate-right类即可-->
+		<ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                Item 1
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                 Item 2
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                 Item 3
+		            </a>
+		        </li>
+		    </ul>
+		    	<br>
+		    		<ul class="mui-table-view">
+		    		    <li class="mui-table-view-cell mui-media">
+		    		        <a href="javascript:;">
+		    		            <img class="mui-media-object mui-pull-right" src="imgs/鬼步1.jpg">
+		    		            <div class="mui-media-body">
+		    		                幸福
+		    		                <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+		    		            </div>
+		    		        </a>
+		    		    </li>
+		    		    <li class="mui-table-view-cell mui-media">
+		    		        <a href="javascript:;">
+		    		            <img class="mui-media-object mui-pull-right" src="imgs/鬼步2.jpg">
+		    		            <div class="mui-media-body">
+		    		                木屋
+		    		                <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+		    		            </div>
+		    		        </a>
+		    		    </li>
+		    		    <li class="mui-table-view-cell mui-media">
+		    		        <a href="javascript:;">
+		    		            <img class="mui-media-object mui-pull-right" src="imgs/鬼步3.jpg">
+		    		            <div class="mui-media-body">
+		    		                CBD
+		    		                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+		    		            </div>
+		    		        </a>
+		    		    </li>
+		    		</ul>
+	</body>
+
+</html>

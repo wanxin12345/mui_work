@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		
+		
+		<div class="mui-input-row mui-checkbox ">
+		    <label>唱歌</label>
+		    <input name="Checkbox" type="checkbox" value="唱歌">
+		</div>
+		<div class="mui-input-row mui-checkbox ">
+		    <label>跳舞</label>
+		    <input name="Checkbox" type="checkbox" value="跳舞">
+		</div>
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="Submit">提交</button>
+	</body>
+<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		window.onload=function(){
+		var	 oBtn=document.getElementById('Submit');
+		var	 Aval=document.getElementsByTagName('input');
+		/*	alert(Aval.length)
+			*/
+			var a=[];
+			oBtn.onclick=function(){
+				a=[];
+				for(i=0;i<Aval.length;i++){
+					/*if(Aval[i].checked){
+						var Bval=Aval[i].value;
+						a.push(Bval);第一种*/
+					a[a.length++]=Aval[i].length
+					
+					}
+				}
+				 if(a.length==0){
+						alert("什么都没有！")
+						return;
+					}
+				alert(a);
+			}
+			
+		}
+			
+		</script>
+</html>

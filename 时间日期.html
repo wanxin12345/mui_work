@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">时间选择器</h1>
+		</header>
+		<div class="mui-content">
+		    <button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="picktime">选择时间</button>
+		</div>
+		<div class="mui-content">
+		    <button type="button" class="mui-btn mui-btn-blue mui-btn-block" id="pickdate">选择日期</button>
+		</div>
+	</body>
+<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<script type="text/javascript">
+			/*window.onload=function(){*/
+				mui.plusReady(function () {
+				  var oDate=document.getElementById('pickdate');
+				oDate.addEventListener('tap',function(){
+					//设置默认日期
+					var oDate=new Date();
+					oDate.setFullYear(2017,9,18);
+					//最小日期
+					var minDate=new Date();
+					minDate.setFullYear(2010,0,1);
+					//最大日期
+					var maxDate=new Date();
+					maxDate.setFullYear(2020,0,1);
+					plus.nativeUI.pickDate(function(e){
+						console.log(e.date)
+						 var d = e.date;
+        mui.toast('您选择的日期是:' + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate());
+					},function(e){
+						mui.toast('您没有选择日期')
+					},{
+						title:'请你选择日期',
+						date:oDate,
+						minDate:minDate,
+						maxDate:maxDate
+					});
+					
+				});
+				
+				var oTime=document.getElementById('picktime');
+				oTime.addEventListener('tap',function(){
+					//默认时间
+					var dTime=new Date();
+					dTime.setHours(6,0);
+					
+					plus.nativeUI.pickTime(function(e){
+						console.log(e.date)
+						 var d = e.date;
+                         mui.toast("您选择的时间是：" + d.getHours() + ":" + d.getMinutes()); 
+					},function(){
+						
+					},{
+						title:'请选择你的时间',
+						is24Hour:true,
+						time:dTime
+						
+					});
+				});
+				});
+			/*}*/
+			
+		</script>
+</html>

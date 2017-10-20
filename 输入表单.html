@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">输入表单</h1>
+		</header><br><br>
+		<form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>用户名</label>
+        <!--快速删除：只需要在input控件上添加.mui-input-clear类，
+        当input 控件中有内容时，右侧会有一个删除图标，点击会清空当前input的内容-->
+    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+    </div>
+    <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password" placeholder="请输入密码">
+    </div>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary" >确认</button>
+        <button type="button" class="mui-btn mui-btn-danger" >取消</button>
+    </div>
+</form>
+		<form class="mui-input-group">
+    <div class="mui-input-row">
+        <label>用户名</label>
+        <!--快速删除：只需要在input控件上添加.mui-input-clear类，
+        当input 控件中有内容时，右侧会有一个删除图标，点击会清空当前input的内容-->
+    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+    </div>
+    <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password" placeholder="请输入密码">
+    </div>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary" id="input_example">验证</button>
+     
+    </div>
+</form>
+	</body>
+<script type="text/javascript">
+	mui('#input_example').each(function(){
+		//偌当前文本框输入为空，提醒不能为空
+		if(!this.value || this.value.trim()==""){
+			var label=this.previousElementSibling;
+			mui.alert(label.innerHTML+"不允许为空");
+			check=false;
+			return true;
+		}
+	});//校验通过，
+	if(check){
+		mui.alert("验证通过！")
+	}
+	
+</script>
+</html>

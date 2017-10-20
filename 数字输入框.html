@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">数字输入框</h1>
+		</header>
+			<br>	<br>	
+				<!--mn-->
+		<div class="mui-numbox" data-numbox-step='5' data-numbox-min='0' data-numbox-max='100'>
+		    <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+		    <input class="mui-input-numbox" type="number" />
+		    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+		</div>
+	</body>
+	<!--
+    data-numbox-min	输入框允许使用的最小值，默认无限制
+    data-numbox-max	输入框允许使用的最大值，默认无限制
+    data-numbox-step	每次点击“+”、“-”按钮变化的步长，默认步长为1
+    -->
+<script type="text/javascript">
+
+</script>
+</html>

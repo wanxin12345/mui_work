@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	<!--	单选框在右边-->
+		<div class="mui-input-row mui-checkbox ">
+		    <label>Checkbox</label>
+		    <input name="Checkbox" type="checkbox" checked>
+		</div>
+		<!--列表显示被选中-->
+		<ul class="mui-table-view mui-table-view-radio">
+	<li class="mui-table-view-cell">
+		<a class="mui-navigate-right">男</a>
+	</li>
+	<li class="mui-table-view-cell mui-selected">
+		<a class="mui-navigate-right">女</a>
+	</li>
+</ul>
+<ul class="mui-table-view mui-table-view-radio">
+        <li class="mui-table-view-cell ">
+            <a class="mui-navigate-right">
+                Item 1
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                 Item 2
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">
+                 Item 3
+            </a>
+        </li>
+    </ul>
+<!--	单选框在左边-->
+		<div class="mui-input-row mui-checkbox mui-left">
+		  <label>checkbox</label>
+		  <input name="checkbox1" type="checkbox" checked >
+		</div>
+		<div class="mui-input-row mui-checkbox mui-disabled">
+		    <label>disabled checkbox</label>
+		    <input name="checkbox" type="checkbox" disabled="disabled">
+		</div>
+		
+		
+		<div class="mui-input-row mui-radio ">
+		    <label>男</label>
+		    <input name="radio" type="radio" value="男" class="pot">
+		</div>
+		<div class="mui-input-row mui-radio ">
+		    <label>女</label>
+		    <input name="radio" type="radio" value="女" class="pot">
+		</div>
+		<button type="button" class="mui-btn mui-btn-blue" id="submit">提交</button>
+	</body>
+<script type="text/javascript">
+	/*window.onload = function(){
+		ABtn=document.getElementsByClassName('pot');
+        oBtn=document.getElementById("submit");
+	for(var i=0;i<ABtn.length;i++){
+		ABtn[i].onclick = function(){
+		alert(this.value);
+		}
+		oBtn.click=function(){
+		     alert(this.value);	
+	    }
+	}
+	}*/
+		/*for(var i=0;i<ABtn.length;i++){
+          if(ABtn[i].checked){
+          	oBtn.click=function(){
+		     alert(this.value);	
+	    }
+	 }
+}*/
+	/*var Ainput=document.querySelectorAll(".pot");
+	for(var i=0;i<ABtn.length;i++){
+		ABtn[i].onclick = function(){
+		alert(this.value);
+		
+	}*/
+	
+	/*function getVals(){
+		var res=getRadioRes('rds');
+		if(rds==null){
+			mui.toast('请选择');
+			return;
+		}
+		mui.toast(res);
+	}
+	function getRadioRes(className){
+		var rdsobj=document.getElementsByTagName('className');
+		var checkVal=null;
+		for(var i=o;i<rdsobj.length;i++){
+			if(rdsobj[i].checked){
+				checkVal=rdsobj[i].value;
+			}
+			return checkVal;
+		}
+	}*/
+	function getVals(){
+    var res = getRadioRes('rds');
+    if(res == null){
+    	mui.toast('请选择'); return;
+    }
+    mui.toast(res);
+}
+function getRadioRes(className){
+    var rdsObj = document.getElementsByClassName(className);
+    var checkVal = null;
+    for(i = 0; i < rdsObj.length; i++){
+        if(rdsObj[i].checked){
+        	checkVal = rdsObj[i].value;
+        }
+    }
+    return checkVal;
+}
+</script>
+</html>

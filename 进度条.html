@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">进度条</h1>
+		</header>
+		进度条无限循环mp
+		<div class="mui-progressbar mui-progressbar-infinite" id="demo1">
+			<span></span>
+		</div>
+		<!--普通进度条-->
+		<!--<div class="mui-progressbar" id="demo1">
+			<span></span>
+		</div>-->
+		
+		
+	</body>
+<script type="text/javascript">
+	/*初始化*/
+			mui("#demo1").progressbar({progress:10}).show();
+	/*更改显示进度条*/
+	mui("#demo1").progressbar().setProgress(20);
+	/*关闭进度条*/
+	//mui("#demo1").progressbar().hide();
+	//页面顶部进度条
+	mui('body').progressbar({
+		progress:20
+	}).show();
+	
+</script>
+</html>
